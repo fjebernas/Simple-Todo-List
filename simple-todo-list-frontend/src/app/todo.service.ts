@@ -19,4 +19,8 @@ export class TodoService {
   store(todo: Todo) : Observable<Object> {
     return this.httpClient.post(`${this.baseUrl}/`, todo);
   } 
+
+  delete(id?: number) : Observable<Object> {
+    return this.httpClient.delete(`${this.baseUrl}/${id}`);
+  }
 }

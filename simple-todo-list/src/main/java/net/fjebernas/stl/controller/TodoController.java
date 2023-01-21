@@ -30,13 +30,12 @@ public class TodoController {
   }
 
   @PostMapping("/")
-  ResponseEntity<Todo> createTodo(@RequestBody Todo todo) {
-    return ResponseEntity.ok(todoService.store(todo));
+  void storeTodo(@RequestBody Todo todo) {
+    todoService.store(todo);
   }
 
   @DeleteMapping("/{id}")
-  ResponseEntity<String> deleteTodo(@PathVariable Long id) {
+  void deleteTodo(@PathVariable Long id) {
     todoService.destroyById(id);
-    return ResponseEntity.ok("Todo deleted successfully.");
   }
 }

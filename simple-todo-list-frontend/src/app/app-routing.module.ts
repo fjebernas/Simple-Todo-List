@@ -4,8 +4,8 @@ import { TodoCreateComponent } from './todo-create/todo-create.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'todos', pathMatch: 'full'},
-  {path: 'index', component: TodoListComponent},
+  {path: '', redirectTo: 'list', pathMatch: 'full'},
+  {path: 'list', component: TodoListComponent},
   {path: 'create', component: TodoCreateComponent},
 ];
 

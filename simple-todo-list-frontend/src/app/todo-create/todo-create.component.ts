@@ -23,7 +23,7 @@ export class TodoCreateComponent {
     this.todoService.store(this.todo).subscribe({
       error: e => console.error(e),
       complete: () => {
-        this.router.navigate(['index']);
+        this.router.navigate(['list']);
       }
     });
   }
