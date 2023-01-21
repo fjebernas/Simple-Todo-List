@@ -35,4 +35,8 @@ export class TodoListComponent implements OnInit {
       complete: () => this.getTodos(),
     });
   }
+
+  showTodo(id?: number) {
+    this.router.navigate(["show", id]);
+  }
 }

@@ -1,0 +1,37 @@
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="fs-4">To-do details</span>
+          <button class="text-warning fs-3 border-0">
+            <i class='bx bx-edit'></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>
+              <p>
+                <span class="fw-bold">ID: </span>
+                {{ todo.id }}
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="fw-bold">Title: </span>
+                {{ todo.title }}
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="fw-bold">Description: </span>
+                {{ todo.description }}
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

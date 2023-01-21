@@ -23,4 +23,8 @@ export class TodoService {
   delete(id?: number) : Observable<Object> {
     return this.httpClient.delete(`${this.baseUrl}/${id}`);
   }
+
+  getById(id?: number) : Observable<Todo> {
+    return this.httpClient.get<Todo>(`${this.baseUrl}/${id}`);
+  }
 }
