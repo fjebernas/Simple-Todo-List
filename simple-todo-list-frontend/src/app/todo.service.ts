@@ -27,4 +27,8 @@ export class TodoService {
   getById(id?: number) : Observable<Todo> {
     return this.httpClient.get<Todo>(`${this.baseUrl}/${id}`);
   }
+
+  update(id?: number, todo?: Todo) : Observable<Object> {
+    return this.httpClient.put(`${this.baseUrl}/${id}`, todo);
+  }
 }

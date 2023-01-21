@@ -31,11 +31,16 @@ export class TodoEditComponent {
     });
   }
 
-  goBack(id?: number) {
+  goBack() {
     this.router.navigate(['show', this.todo.id]);
   }
   
   onSubmit() {
-
+    this.todoService
+      .update(this.todo.id, this.todo)
+      .subscribe({
+        error: e => console.error(e),
+        complete: () => this.router.navigate(['list'])
+    });
   }
 }
