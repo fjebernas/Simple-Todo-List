@@ -15,4 +15,8 @@ export class TodoService {
   getAll(): Observable<Todo[]> {
     return this.httpClient.get<Todo[]>(`${this.baseUrl}/`);
   }
+
+  store(todo: Todo) : Observable<Object> {
+    return this.httpClient.post(`${this.baseUrl}/`, todo);
+  } 
 }

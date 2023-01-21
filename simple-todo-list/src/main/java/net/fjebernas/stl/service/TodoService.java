@@ -10,7 +10,7 @@ public interface TodoService {
 
   Todo getById(Long id);
 
-  void store(Todo todo);
+  Todo store(Todo todo);
 
   void destroyById(Long id);
 
