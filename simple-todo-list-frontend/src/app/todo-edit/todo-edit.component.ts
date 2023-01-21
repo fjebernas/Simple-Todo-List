@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Todo } from '../todo';
 import { TodoService } from '../todo.service';
 
 @Component({
-  selector: 'app-todo-show',
-  templateUrl: './todo-show.component.html',
-  styleUrls: ['./todo-show.component.css']
+  selector: 'app-todo-edit',
+  templateUrl: './todo-edit.component.html',
+  styleUrls: ['./todo-edit.component.css']
 })
-export class TodoShowComponent implements OnInit {
-
+export class TodoEditComponent {
+  
   todo: Todo = new Todo();
 
   constructor(
@@ -31,8 +31,11 @@ export class TodoShowComponent implements OnInit {
     });
   }
 
-  editTodo(id?: number) {
-    this.router.navigate(['edit', id]);
+  goBack(id?: number) {
+    this.router.navigate(['show', this.todo.id]);
   }
   
+  onSubmit() {
+
+  }
 }

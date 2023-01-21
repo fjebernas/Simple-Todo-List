@@ -5,7 +5,9 @@
       <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
           <span class="fs-4">To-do details</span>
-          <button class="text-warning fs-3 border-0">
+          <button 
+            (click)="editTodo(todo.id)"
+            class="text-warning fs-3 border-0 bg-transparent">
             <i class='bx bx-edit'></i>
           </button>
         </div>
